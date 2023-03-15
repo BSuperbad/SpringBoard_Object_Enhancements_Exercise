@@ -79,7 +79,6 @@ Write a function which generates an animal object. The function should accepts 3
 
 Use one or more of the object enhancements we’ve covered.
 
-```jsx
 const d = createAnimal("dog", "bark", "Woooof!")
 // {species: "dog", bark: ƒ}
 d.bark()  //"Woooof!"
@@ -87,6 +86,12 @@ d.bark()  //"Woooof!"
 const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
 // {species: "sheep", bleet: ƒ}
 s.bleet() //"BAAAAaaaa"
-```
 
-[Solution](https://lessons.springboard.com/Solution-7eee406482f74110b6c0ecde71bc7de2)
+function createAnimal (species, verb, noise){
+    return {
+        species,
+        [verb]() {
+            return noise
+        }
+    }
+}
